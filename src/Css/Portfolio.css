@@ -1,0 +1,30 @@
+.main-mfdata{
+    width: 50%;
+    height : fit-content;
+    position: relative;
+    top: 20%;
+    left: 25%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+.main-mf{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(4, 4, 63);
+    color: white;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mf{
+    margin: 1% 0%;
+    width: 80%;
+    height: 85px;
+    background-color: rgb(60, 60, 134);
+    padding: 10px;
+}
+.amt{
+    color : white;
+}

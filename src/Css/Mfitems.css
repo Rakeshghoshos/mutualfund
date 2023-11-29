@@ -1,0 +1,22 @@
+.main-items{
+    background-color: rgb(5, 82, 76);
+    color: white;
+    width: 25%;
+    height: fit-content;
+    margin: 2%;
+    padding: 1%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.btn-items{
+    background-color: lightseagreen;
+    font-size: larger;
+    font-weight: bold;
+    padding: 1%;
+    color: white;
+    border: 1px solid rgb(133, 130, 130);
+    border-radius: 10px;
+}

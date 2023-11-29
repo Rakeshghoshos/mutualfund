@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+import React from 'react'
+import {BrowserRouter,Routes, Route} from 'react-router-dom';
+import Navbar from './Navbar';
+import Home from './components/Home';
+import Login from './components/Login';
 import './App.css';
+import Portfolio from './components/Portfolio';
+import Logout from './components/Logout';
+import {useSelector} from 'react-redux';
+import Register from './components/Register';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export default function App(){
+  const s = useSelector(state => state.session.value);
+
+  return(
+          <div className="app">
+            {s ? (<>
+          <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" Component={Home}></Route>
+        </Routes>
+          <Routes>
+        <Route exact path="/portfolio" Component={Portfolio}></Route>
+        </Routes>
+          <Routes>
+          <Route exact path="/logout" Component={Logout}></Route>
+        </Routes>
+        </BrowserRouter>
+        </> ):
+        (<>
+          <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" Component={Home}></Route>
+        </Routes>
+        <Routes>
+          <Route exact path="/register" Component={Register}></Route>
+        </Routes>
+          <Routes>
+          <Route exact path="/login" Component={Login}></Route>
+        </Routes>
+        </BrowserRouter>
+        </>)}
     </div>
   );
 }
-
-export default App;

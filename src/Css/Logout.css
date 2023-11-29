@@ -1,0 +1,26 @@
+.logout{
+    margin-top: 15%;
+    margin-bottom: 33%;
+}
+.main-logout{
+    position: fixed;
+    top: 15%;
+    left: 40%;
+    color: white;
+    width: fit-content;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+.logout-btn{
+    background-color: rgb(7, 7, 77);
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    border: 1px solid blue;
+    border-radius: 5px;
+    height: 5vh;
+}
